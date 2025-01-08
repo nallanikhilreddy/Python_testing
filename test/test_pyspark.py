@@ -1,7 +1,9 @@
 import datetime
-
+import os
+import sys
 import pyspark
 import pytest
+from pyspark.sql import SparkSession
 from pyspark.sql.types import (
     DateType,
     DoubleType,
@@ -10,8 +12,11 @@ from pyspark.sql.types import (
     StructField,
     StructType,
 )
-
-from src.pyspark_test import assert_pyspark_df_equal
+ 
+# Add the src directory to the Python path
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", "src"))
+ 
+from pyspark_src import assert_pyspark_df_equal
 
 
 class TestAssertPysparkDfEqual:
