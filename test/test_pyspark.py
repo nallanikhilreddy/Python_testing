@@ -10,8 +10,15 @@ from pyspark.sql.types import (
     StructField,
     StructType,
 )
+import sys
+import os
 
-from src.pyspark_test import assert_pyspark_df_equal
+# Add the src directory to the Python path
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
+
+from pyspark_src import assert_pyspark_df_equal
+
+# from src.pyspark_src import assert_pyspark_df_equal
 
 
 class TestAssertPysparkDfEqual:
