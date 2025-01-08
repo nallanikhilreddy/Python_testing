@@ -5,7 +5,7 @@ from pyspark.sql import SparkSession
 def spark_session():
     """Fixture to initialize a PySpark session for tests."""
     spark = SparkSession.builder \
-        .main("local[*]") \
+        .master("local[*]") \
         .appName("PySpark Test Session") \
         .getOrCreate()
     yield spark
