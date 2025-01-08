@@ -3,10 +3,10 @@ from pyspark.sql import SparkSession
 
 @pytest.fixture(scope="session")
 def spark_session():
-    """Fixture for creating a SparkSession for tests."""
+    """Fixture to initialize a PySpark session for tests."""
     spark = SparkSession.builder \
         .master("local[*]") \
-        .appName("pytest-pyspark-testing") \
+        .appName("PySpark Test Session") \
         .getOrCreate()
     yield spark
     spark.stop()
