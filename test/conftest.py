@@ -1,9 +1,9 @@
-import pytest
+# import pytest
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import SparkSession
 
 
-@pytest.fixture()
+# @pytest.fixture()
 def spark_session():
     """
     Get the running Spark Session if exist otherwise create new session
