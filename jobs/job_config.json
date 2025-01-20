@@ -1,0 +1,12 @@
+{
+    "name": "cicd_job_ADB",
+    "new_cluster": {
+        "spark_version": "15.4.x-scala2.12",
+        "node_type_id": "Standard_D4dS_v5",
+        "num_workers": 0
+    },
+    "notebook_task": {
+        "notebook_path": "/Workspace/Users/kasaragadda.hadoop1@gmail.com/pyspark_cicd_deployment/nb_src_python.py",
+        "base_parameters": {}
+    }
+}
