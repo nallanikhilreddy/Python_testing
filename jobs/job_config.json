@@ -1,8 +1,8 @@
 {
-    "name": "cicd-cluster",
+    "name": "K Srinivasarao's Cluster",
     "new_cluster": {
         "spark_version": "15.4.x-scala2.12",
-        "node_type_id": "Standard_D4dS_v5",
+        "node_type_id": "Standard_DS3_v2",
         "num_workers": 0
     },
     "notebook_task": {
