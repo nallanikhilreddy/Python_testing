@@ -1,12 +1,31 @@
 {
-    "name": "K Srinivasarao's Cluster",
-    "new_cluster": {
-        "spark_version": "15.4.x-scala2.12",
-        "node_type_id": "Standard_DS3_v2",
-        "num_workers": 0
-    },
-    "notebook_task": {
-        "notebook_path": "/Workspace/Users/kasaragadda.hadoop1@gmail.com/pyspark_cicd_deployment/nb_src_python.py",
-        "base_parameters": {}
+    "name": "Pyspark_CICD_Job",
+    "tasks": [
+        {
+            "task_key": "notebook_task_1",
+            "notebook_task": {
+                "notebook_path": "/Workspace/Shared/dev_pyspark/test/nb_test_pyspark.py"
+            },
+            "new_cluster": {
+                "spark_version": "15.4.x-scala2.12",
+                "node_type_id": "Standard_DS3_v2",
+                "num_workers": 0,
+                "custom_tags": {
+                    "ClusterType": "SingleNode"
+                }
+            },
+            "libraries": [
+                {
+                    "pypi": {
+                        "package": "pytest"
+                    }
+                }
+            ]
+        }
+    ],
+    "email_notifications": {
+        "on_start": [],
+        "on_success": ["nallanikhilreddy25@gmail.com"],
+        "on_failure": ["nallanikhilreddy25@gmail.com"]
     }
 }
